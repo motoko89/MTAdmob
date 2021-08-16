@@ -1,5 +1,6 @@
 ﻿using Android.Gms.Ads;
 using Android.Gms.Ads.Hack;
+using MarcTron.Plugin.CustomEventArgs;
 using System;
 using Xamarin.Forms.Platform.Android;
 
@@ -58,6 +59,7 @@ namespace MarcTron.Plugin.Services
         {
             base.OnAdFailedToLoad(p0);
             mRewardedAd = null;
+            mTAdmobImplementation.MOnRewardedVideoAdFailedToLoad(new MTEventArgs (){ ErrorCode = p0.Code, ErrorDomain = p0.Domain, ErrorMessage = p0.Message });
         }
 
         public override void OnRewardedAdLoaded(Android.Gms.Ads.Rewarded.RewardedAd rewardedAd)
@@ -65,7 +67,7 @@ namespace MarcTron.Plugin.Services
             base.OnRewardedAdLoaded(rewardedAd);
             mRewardedAd = rewardedAd;
             mRewardedAd.FullScreenContentCallback = new MyFullScreenContentCallback(mTAdmobImplementation, false);
-            mTAdmobImplementation.MOnRewardLoaded();
+            mTAdmobImplementation.MOnRewardedVideoAdLoaded();
         }
 
         public void OnUserEarnedReward(Android.Gms.Ads.Rewarded.IRewardItem p0)

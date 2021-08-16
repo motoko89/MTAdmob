@@ -43,6 +43,7 @@ namespace MarcTron.Plugin.Interfaces
         event EventHandler OnInterstitialClosed;
 
         event EventHandler<MTEventArgs> OnRewarded;
+
         event EventHandler OnRewardedVideoAdClosed;
         event EventHandler<MTEventArgs> OnRewardedVideoAdFailedToLoad;
         event EventHandler OnRewardedVideoAdLeftApplication;

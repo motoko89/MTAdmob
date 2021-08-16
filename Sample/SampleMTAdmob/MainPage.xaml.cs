@@ -57,6 +57,11 @@ namespace SampleMTAdmob
             }
         }
 
+        private void Current_OnRewarded1(object sender, MTEventArgs e)
+        {
+
+        }
+
         private void Current_OnInterstitialClosed(object sender, EventArgs e)
         {
             Debug.WriteLine("OnInterstitialClosed");
