@@ -29,7 +29,7 @@ namespace MarcTron.Plugin
         public bool ComplyWithFamilyPolicies { get; set; }
 
         InterstitialService interstitialService;
-        RewardService rewardService;
+        //RewardService rewardService;
 
         public event EventHandler<MTEventArgs> OnRewarded;
         public event EventHandler<MTEventArgs> OnUserEarnedReward;
@@ -87,7 +87,7 @@ namespace MarcTron.Plugin
         public MTAdmobImplementation()
         {
             interstitialService = new InterstitialService(this);
-            rewardService = new RewardService(this);
+            //rewardService = new RewardService(this);
         }
 
         public static AdRequest.Builder GetRequest(/*MTAdmobImplementation mTAdmobImplementation*/)
@@ -140,7 +140,7 @@ namespace MarcTron.Plugin
             interstitialService.ShowInterstitial();
         }
 
-        public bool IsRewardedVideoLoaded()
+        /*public bool IsRewardedVideoLoaded()
         {
             return rewardService.IsLoaded();
         }
@@ -153,7 +153,7 @@ namespace MarcTron.Plugin
         public void ShowRewardedVideo()
         {
             rewardService.ShowReward();
-        }
+        }*/
 
         public string GetAdContentRatingString()
         {

@@ -28,11 +28,11 @@ namespace MarcTron.Plugin.Interfaces
         void LoadInterstitial(string adUnit);
         void ShowInterstitial(string adUnit);
 
-        bool IsRewardedVideoLoaded();
+       /* bool IsRewardedVideoLoaded();
 
         public void LoadRewardedVideo(string adUnit, MTRewardedAdOptions options = null);
 
-        void ShowRewardedVideo();
+        void ShowRewardedVideo();*/
 
         string GetAdContentRatingString();
 
