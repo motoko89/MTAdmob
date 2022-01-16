@@ -28,8 +28,6 @@ namespace MarcTron.Plugin
         InterstitialService interstitialService;
         RewardService rewardService;
 
-        Interstitial _adInterstitial;
-
         public event EventHandler<MTEventArgs> OnRewarded;
         public event EventHandler OnRewardedVideoAdClosed;
         public event EventHandler<MTEventArgs> OnRewardedVideoAdFailedToLoad;
