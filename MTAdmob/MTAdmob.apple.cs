@@ -26,7 +26,7 @@ namespace MarcTron.Plugin
         public MTMaxAdContentRating MaxAdContentRating { get ; set ; } = MTMaxAdContentRating.MaxAdContentRatingG;
 
         InterstitialService interstitialService;
-        RewardService rewardService;
+        //RewardService rewardService;
 
         public event EventHandler<MTEventArgs> OnRewarded;
         public event EventHandler OnRewardedVideoAdClosed;
@@ -58,7 +58,7 @@ namespace MarcTron.Plugin
         public MTAdmobImplementation()
         {
             interstitialService = new InterstitialService(this);
-            rewardService = new RewardService(this);           
+            //rewardService = new RewardService(this);           
         }
 
         public static Request GetRequest()
@@ -121,7 +121,7 @@ namespace MarcTron.Plugin
             interstitialService.ShowInterstitial(adUnit);
         }
 
-        public bool IsRewardedVideoLoaded()
+       /* public bool IsRewardedVideoLoaded()
         {
             return rewardService.IsRewardedVideoLoaded();
         }
@@ -134,7 +134,7 @@ namespace MarcTron.Plugin
         public void ShowRewardedVideo()
         {
             rewardService.ShowRewardedVideo();
-        }
+        }*/
 
         public string GetAdContentRatingString()
         {
