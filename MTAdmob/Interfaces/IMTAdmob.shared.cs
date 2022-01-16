@@ -24,9 +24,9 @@ namespace MarcTron.Plugin.Interfaces
 
         List<string> TestDevices { get; set; }
 
-        bool IsInterstitialLoaded();
+        bool IsInterstitialLoaded(string adUnit);
         void LoadInterstitial(string adUnit);
-        void ShowInterstitial();
+        void ShowInterstitial(string adUnit);
 
         bool IsRewardedVideoLoaded();
 

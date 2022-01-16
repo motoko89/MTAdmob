@@ -195,7 +195,7 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('xamarinios')) ">
     <Compile Include="**\*.apple.cs" />
-	  <PackageReference Include="Xamarin.Google.iOS.MobileAds" Version="7.66.0" />
+	  <PackageReference Include="Xamarin.Google.iOS.MobileAds" Version="8.13.1" />
   </ItemGroup>
 
   <ItemGroup>

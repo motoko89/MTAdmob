@@ -31,7 +31,11 @@ namespace MarcTron.Plugin.Renderers
                 Console.WriteLine("You must set the adsID before using it");
             }
 
-            _adView = new BannerView(AdSizeCons.SmartBannerPortrait,
+            CGRect frame = UIDevice.CurrentDevice.CheckSystemVersion(11, 0) ?
+                controller.View.SafeAreaInsets.InsetRect(controller.View.Frame) :
+                controller.View.Frame;
+            
+            _adView = new BannerView(AdSizeCons.GetCurrentOrientationAnchoredAdaptiveBannerAdSize(frame.Width),
                 new CGPoint(0, UIScreen.MainScreen.Bounds.Size.Height - AdSizeCons.Banner.Size.Height))
             {
                 AdUnitId = _adUnitId,

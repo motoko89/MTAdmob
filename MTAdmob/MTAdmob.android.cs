@@ -125,7 +125,7 @@ namespace MarcTron.Plugin
             return requestBuilder;
         }
 
-        public bool IsInterstitialLoaded()
+        public bool IsInterstitialLoaded(string adUnit)
         {
             return interstitialService.IsLoaded();
         }
@@ -135,7 +135,7 @@ namespace MarcTron.Plugin
             interstitialService.LoadInterstitial(adUnit);
         }
 
-        public void ShowInterstitial()
+        public void ShowInterstitial(string adUnit)
         {
             interstitialService.ShowInterstitial();
         }

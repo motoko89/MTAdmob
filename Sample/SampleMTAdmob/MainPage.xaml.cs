@@ -168,12 +168,12 @@ namespace SampleMTAdmob
 
         private void ShowInterstitial_OnClicked(object sender, EventArgs e)
         {
-            CrossMTAdmob.Current.ShowInterstitial();
+            CrossMTAdmob.Current.ShowInterstitial("");
         }
 
         private void IsLoadedInterstitial_OnClicked(object sender, EventArgs e)
         {
-            myLabel.Text = CrossMTAdmob.Current.IsInterstitialLoaded().ToString();
+            myLabel.Text = CrossMTAdmob.Current.IsInterstitialLoaded("").ToString();
         }
 
         private void NextPage(object sender, EventArgs e)

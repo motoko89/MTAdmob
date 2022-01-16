@@ -106,9 +106,9 @@ namespace MarcTron.Plugin
             return request;
         }
 
-        public bool IsInterstitialLoaded()
+        public bool IsInterstitialLoaded(string adUnit)
         {
-            return interstitialService.IsLoaded();
+            return interstitialService.IsLoaded(adUnit);
         }
 
         public void LoadInterstitial(string adUnit)
@@ -116,9 +116,9 @@ namespace MarcTron.Plugin
             interstitialService.LoadInterstitial(adUnit);
         }
 
-        public void ShowInterstitial()
+        public void ShowInterstitial(string adUnit)
         {
-            interstitialService.ShowInterstitial();
+            interstitialService.ShowInterstitial(adUnit);
         }
 
         public bool IsRewardedVideoLoaded()
