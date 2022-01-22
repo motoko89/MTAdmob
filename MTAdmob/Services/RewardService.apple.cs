@@ -6,19 +6,20 @@ using UIKit;
 
 namespace MarcTron.Plugin.Services
 {
-    class RewardService : RewardBasedVideoAdDelegate
+    class RewardService //: RewardBasedVideoAdDelegate
     {
         private MTAdmobImplementation mTAdmobImplementation;
 
         public RewardService(MTAdmobImplementation mTAdmobImplementation)
         {
             this.mTAdmobImplementation = mTAdmobImplementation;
-            RewardBasedVideoAd.SharedInstance.Delegate = this;
+          //  RewardBasedVideoAd.SharedInstance.Delegate = this;
         }
 
         public bool IsRewardedVideoLoaded()
         {
-            return RewardBasedVideoAd.SharedInstance.IsReady;
+            // return RewardBasedVideoAd.SharedInstance.IsReady;
+            return false;
         }
 
         public void LoadRewardedVideo(string adUnit, MTRewardedAdOptions options = null)
@@ -27,7 +28,7 @@ namespace MarcTron.Plugin.Services
                 return;
 
             //old method
-            if (RewardBasedVideoAd.SharedInstance.IsReady)
+           /* if (RewardBasedVideoAd.SharedInstance.IsReady)
             {
                 mTAdmobImplementation.MOnRewardedVideoAdLoaded();
                 return;
@@ -36,7 +37,7 @@ namespace MarcTron.Plugin.Services
             RewardBasedVideoAd.SharedInstance.CustomRewardString = options?.CustomData;
 
             var request = MTAdmobImplementation.GetRequest();
-            RewardBasedVideoAd.SharedInstance.LoadRequest(request, adUnit);
+            RewardBasedVideoAd.SharedInstance.LoadRequest(request, adUnit);*/
 
             //new method
             //if (_rewardedAd==null)
@@ -50,7 +51,7 @@ namespace MarcTron.Plugin.Services
                 return;
 
             //old method
-            if (RewardBasedVideoAd.SharedInstance.IsReady)
+           /* if (RewardBasedVideoAd.SharedInstance.IsReady)
             {
                 var window = UIApplication.SharedApplication.KeyWindow;
                 var vc = window.RootViewController;
@@ -60,7 +61,7 @@ namespace MarcTron.Plugin.Services
                 }
 
                 RewardBasedVideoAd.SharedInstance.Present(vc);
-            }
+            }*/
 
             //new method
             //if (_rewardedAd.IsReady)
@@ -77,7 +78,7 @@ namespace MarcTron.Plugin.Services
 
 
         //old method
-        public override void DidRewardUser(RewardBasedVideoAd rewardBasedVideoAd, AdReward reward)
+       /* public override void DidRewardUser(RewardBasedVideoAd rewardBasedVideoAd, AdReward reward)
         {
             mTAdmobImplementation.MOnRewarded(new MTEventArgs() { RewardAmount = (int)reward.Amount, RewardType = reward.Type });
         }
@@ -116,6 +117,6 @@ namespace MarcTron.Plugin.Services
         public override void WillLeaveApplication(RewardBasedVideoAd rewardBasedVideoAd)
         {
             mTAdmobImplementation.MOnRewardedVideoAdLeftApplication();
-        }
+        }*/
     }
 }
