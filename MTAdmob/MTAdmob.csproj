@@ -20,10 +20,10 @@
     <PackageId>MarcTron.Admob</PackageId>
     
     <Product>Plugin.MtAdmob</Product>
-    <AssemblyVersion>1.8.4.0</AssemblyVersion>
-    <AssemblyFileVersion>1.8.4.0</AssemblyFileVersion>
-    <Version>1.8.4</Version>
-    <PackageVersion>1.8.4.0</PackageVersion>
+    <AssemblyVersion>1.8.5.0</AssemblyVersion>
+    <AssemblyFileVersion>1.8.5.0</AssemblyFileVersion>
+    <Version>1.8.5</Version>
+    <PackageVersion>1.8.5.0</PackageVersion>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
@@ -195,7 +195,7 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('xamarinios')) ">
     <Compile Include="**\*.apple.cs" />
-	  <PackageReference Include="Xamarin.Google.iOS.MobileAds" Version="8.13.3" />
+	  <PackageReference Include="Xamarin.Google.iOS.MobileAds" Version="8.13.4" />
   </ItemGroup>
 
   <ItemGroup>
